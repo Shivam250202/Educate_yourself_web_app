@@ -1,0 +1,90 @@
+/* Add this to your base.css or a separate CSS file */
+
+.gradient-custom-2 {
+    /* fallback for browsers that don't support gradient */
+    background-color: #6f1a86;
+  
+    /* Chrome Safari */
+    background-image: linear-gradient(
+      45deg,
+      #ffa1ad 0%,
+      #ffc75f 50%,
+      #ffec8b 100%
+    );
+  
+    /* Opera Firefox IE */
+    background-image: -o-linear-gradient(45deg, #ffa1ad 0%, #ffc75f 50%, #ffec8b 100%);
+    background-image: -webkit-linear-gradient(45deg, #ffa1ad 0%, #ffc75f 50%, #ffec8b 100%);
+    background-image: -moz-linear-gradient(45deg, #ffa1ad 0%, #ffc75f 50%, #ffec8b 100%);
+  }
+  
+  /* Additional styles */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 2px;
+    padding: 2px;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  .card {
+    margin-bottom: 20px;
+  }
+  
+  .card-body {
+    padding: 2px; /* Adjust as needed */
+  }
+  
+  .card-body img {
+    width: 185px;
+  }
+  
+  .form-outline {
+    position: relative;
+  }
+  
+  .form-outline input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc; /* Change as needed */
+    outline: none;
+    transition: border-bottom-color 0.3s ease;
+  }
+  
+  .form-outline input:focus {
+    border-bottom-color: #6f1a86; /* Change as needed */
+  }
+  
+  .form-outline label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    color: #999; /* Change as needed */
+    transition: top 0.3s ease, color 0.3s ease;
+  }
+  
+  .form-outline input:focus + label,
+  .form-outline input:not(:placeholder-shown) + label {
+    top: -12px;
+    font-size: 12px;
+    color: #6f1a86; /* Change as needed */
+  }
+  
+  .text-muted {
+    color: #999; /* Change as needed */
+  }
+  
+  .btn-outline-danger {
+    color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  .btn-outline-danger:hover {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  

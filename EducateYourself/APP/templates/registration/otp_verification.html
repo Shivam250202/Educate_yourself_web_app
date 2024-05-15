@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}OTP Verification{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>OTP Verification</h1>
+    <p>Please enter the OTP sent to your email to verify your identity.</p>
+    <form method="post" action="{% url 'reset_password' %}">
+        {% csrf_token %}
+        <input type="hidden" name="email" value="{{ email }}">
+        <label for="otp">Enter OTP:</label>
+        <input type="text" name="otp" id="otp" required>
+        <button type="submit">Reset Password</button>
+    </form>
+</div>
+{% endblock %}

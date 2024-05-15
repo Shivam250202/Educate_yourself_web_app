@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+{% block title %}Educate Yourself - Empower Your Learning{% endblock %}
+
+{% block content %}
+
+<header>
+  <div class="container">
+    <a href="{% url 'home' %}" class="logo">Educate Yourself</a>
+    <nav>
+      <ul>
+        <li><a href="{% url 'courses' %}">Courses</a></li>
+        <li><a href="{% url 'about' %}">About Us</a></li>
+        <li>
+          <a href="{% url 'signup' %}" class="custom-button">
+            Sign Up
+            <div class="arrow-wrapper">
+              <div class="arrow"></div>
+            </div>
+          </a>
+        </li>
+        <li><a href="{% url 'login' %}" class="cta">Login</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main role="main">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Empower Your Learning Journey</h1>
+      <p>Explore a vast array of courses, personalize your learning path, and connect with a supportive community.</p>
+      <a href="#courses" class="btn btn-primary">Explore Courses</a>
+    </div>
+  </section>
+
+  <!-- Course Highlights -->
+  <section class="course-highlights">
+    <div class="container">
+      <h2>Featured Courses</h2>
+      <div class="course-container">
+        <!-- Single Course Item -->
+        <div class="course-item">
+          <img src="path-to-course-image.jpg" alt="Course Title">
+          <div class="course-info">
+            <h3>Course Title 1</h3>
+            <p>A brief description of what the course covers.</p>
+            <a href="#course-detail" class="btn btn-secondary">Learn More</a>
+          </div>
+        </div>
+        <!-- Repeat for other courses -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="container">
+      <h2>What Our Students Say</h2>
+      <div class="testimonial-slider">
+        <!-- Testimonial Item -->
+        <div class="testimonial-item">
+          <blockquote>
+            "Educate Yourself has transformed my career. The courses are comprehensive, and the instructors are
+            top-notch. Highly recommended!"
+          </blockquote>
+          <div class="student-info">
+            <img src="path-to-student-image.jpg" alt="Student Name" class="student-photo">
+            <p class="student-name">Jane Doe</p>
+            <p class="course-taken">Advanced Web Development</p>
+          </div>
+        </div>
+        <!-- Repeat for other testimonials -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Instructors' Profiles Section -->
+  <section class="instructors">
+    <div class="container">
+      <h2>Meet Our Instructors</h2>
+      <div class="instructor-container">
+        <!-- Single Instructor Profile -->
+        <div class="instructor-profile">
+          <img src="path-to-instructor-image.jpg" alt="Instructor Name" class="instructor-photo">
+          <div class="instructor-info">
+            <h3>Instructor Name</h3>
+            <p>Specialization or Title</p>
+            <p>A brief bio highlighting experience and qualifications.</p>
+            <a href="#instructor-detail" class="btn btn-secondary">View Profile</a>
+          </div>
+        </div>
+        <!-- Repeat for other instructors -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Calendar -->
+  <section class="events-calendar">
+    <div class="container">
+      <h2>Upcoming Events</h2>
+      <div class="event-card">
+        <h3>Web Development Workshop</h3>
+        <p>Date: May 20, 2024</p>
+        <p>Location: Virtual</p>
+      </div>
+      <!-- Add more event cards as needed -->
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="blog-section">
+    <div class="container">
+      <h2>Latest Blog Posts</h2>
+      <article class="blog-post">
+        <h3>Mastering HTML and CSS</h3>
+        <p>Learn the basics of web design with our step-by-step guide.</p>
+      </article>
+      <!-- Add more blog posts here -->
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="faqs">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>How can I improve my coding skills?</h3>
+        <p>Explore online coding platforms and practice regularly.</p>
+      </div>
+      <!-- Add more FAQ items -->
+    </div>
+  </section>
+
+  <!-- Partnerships -->
+  <section class="partnerships">
+    <div class="container">
+      <h2>Our Partnerships</h2>
+      <div class="partner-logo">
+        <img src="partner1.png" alt="Partner 1">
+        <p>Code Academy</p>
+      </div>
+      <!-- Add more partner logos -->
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="call-to-action">
+    <div class="container">
+      <h2>Join Our Newsletter</h2>
+      <p>Subscribe to receive updates and exclusive learning resources!</p>
+      <form action="/subscribe" method="post">
+        <input type="email" name="email" placeholder="Enter your email">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+</main>
+{% endblock %}
